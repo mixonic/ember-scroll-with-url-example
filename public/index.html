@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <style type="text/css">
+      html, body {
+        font-family: Georgia;
+        background-color: #232424;
+        font-size: 16px;
+        line-height: 1.4; /* Magic number is 21px */
+        color: #d7d6d6;
+      }
+      * { margin: 0; padding: 0; }
+      h1, h2 {
+        font-family: Garamond;
+        color: #f5f4f4;
+        color: #e3e3e2;
+        margin-bottom: 21px;
+
+        font-size: 2.4rem;
+        line-height: 1.17;
+      }
+      h2 {
+        font-size: 2.0rem;
+        line-height: 1.17;
+      }
+      p, pre {
+        font-size: 1.0rem;
+        line-height: 1.4;
+        margin-bottom: 21px;
+        text-align: justify;
+      }
+      section[role=main] {
+        width: 726px;
+        margin: 0 auto 0;
+        padding: 0 21px 0;
+      }
+      @media only screen and (max-width: 768px) {
+        section[role=main] {
+          width: auto;
+        }
+      }
+      a.active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/x-handlebars" data-template-name="application">
+      <header>
+      </header>
+      <section role="main">
+        {{outlet}}
+      </section>
+      <footer>
+      </footer>
+    </script>
+    <script type="text/x-handlebars" data-template-name="index">
+      <h3>Index</h3>
+      <br />
+      <p>Some content in a header</p>
+      <br />
+      <br />
+      <div class="fixable-header">
+        {{#linkTo "index.a"}}a{{/linkTo}} {{#linkTo "index.b"}}b{{/linkTo}}
+      </div>
+      <hr />
+      {{outlet}}
+    </script>
+    <script type="text/x-handlebars" data-template-name="index/a">
+      <h4>Section A</h4>
+      <br />
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+      <p>Section A</p>
+    </script>
+    <script type="text/x-handlebars" data-template-name="index/b">
+      <h4>Section B</h4>
+      <br />
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+      <p>Section B</p>
+    </script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/ember.js"></script>
+    <script type="text/javascript" src="js/ember-data.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
